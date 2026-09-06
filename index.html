@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Public results, history, charts and community forum.">
+  <title>Results & Community</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="brand">📊 ResultsHub</div><nav><a href="#home">Home</a><a href="#results">Results</a><a href="#charts">Charts</a><a href="#forum">Forum</a><button id="authBtn">Login</button></nav></header>
+<main>
+<section id="home" class="hero"><div><span class="eyebrow">PUBLIC RESULTS & COMMUNITY</span><h1>Results, history and community — in one place.</h1><p>Browse published results and historical charts. Sign in to join the community forum.</p><div class="actions"><a class="primary" href="#results">View Results</a><a class="secondary" href="#forum">Open Forum</a></div></div><div class="hero-card"><div class="muted">Latest published result</div><strong id="latestValue">—</strong><span id="latestMeta">No results yet</span></div></section>
+<section id="results"><div class="section-head"><div><span class="eyebrow">RESULTS</span><h2>Latest results</h2></div><input id="search" placeholder="Search market..."></div><div id="resultsGrid" class="cards"></div></section>
+<section id="charts"><div class="section-head"><div><span class="eyebrow">HISTORY</span><h2>Result chart</h2></div><select id="marketSelect"><option value="">Select market</option></select></div><div class="chart-wrap"><canvas id="chart" height="260"></canvas><p id="chartEmpty" class="empty">Add results from the admin panel to display the historical chart.</p></div></section>
+<section id="forum"><div class="section-head"><div><span class="eyebrow">COMMUNITY</span><h2>Forum</h2></div><button class="primary" id="newPostBtn">Create post</button></div><div id="posts" class="posts"></div></section>
+<section id="admin" class="hidden"><div class="section-head"><div><span class="eyebrow">ADMIN</span><h2>Admin panel</h2></div></div><div class="admin-grid"><form id="resultForm" class="panel"><h3>Publish result</h3><input name="market" placeholder="Market name" required><input name="date" type="date" required><input name="value" placeholder="Result value" required><button class="primary">Publish</button></form><div class="panel"><h3>Admin status</h3><p id="adminStatus">Checking…</p><p class="muted">Admin access is controlled by the Supabase profile role.</p></div></div></section>
+</main>
+<div id="modal" class="modal hidden"><div class="modal-card"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+<footer>ResultsHub · Public information and community discussion. No betting or wagering services.</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script><script src="app.js"></script>
+</body></html>
