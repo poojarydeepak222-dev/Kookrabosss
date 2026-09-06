@@ -1,3 +1,2 @@
-// Add your Supabase publishable key here before deploying.
-// Keep this file limited to the public/publishable key. Never put a service_role or secret key in website code.
-window.SUPABASE_KEY='PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE';
+// This is the public Supabase publishable key. Never place a service_role/secret key here.
+window.SUPABASE_KEY='sb_publishable_Pba7tiTGZFh3lo-AcVitlA_6E-WA5ZJ';
